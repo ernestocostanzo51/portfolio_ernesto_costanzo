@@ -1,0 +1,156 @@
+@import url('bootstrap');
+
+:root {
+  --bg-main: #10100d;        /* Nero con un sottotono caldissimo dorato */
+  --bg-card: #181814;        /* Grigio/Nero caldo per le card */
+  --border-color: #2a281e;   /* Bordi scuri dorati */
+  --text-main: #f8f9fa;      
+  --text-muted: #adb5bd;     
+  --accent-yellow: #d4af37;  
+}
+
+/* Sfondo con una delicata sfumatura di luce dorata al centro */
+body {
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Stile Logo tipo JavaScript */
+.js-logo {
+  width: 42px;
+  height: 42px;
+  background-color: #d4af37; /* Giallo scuro / Oro */
+  color: #000000;            /* Testo nero */
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: flex-end;     /* Allinea in basso */
+  justify-content: flex-end; /* Allinea a destra */
+  padding: 3px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.js-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+}
+
+/* Stile Link Navigazione con effetto Lucente */
+.custom-nav-link {
+  color: #f8f9fa !important;
+  font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Effetto Hover "Lucente" */
+.custom-nav-link:hover,
+.custom-nav-link:focus {
+  color: #d4af37 !important;
+  background-color: rgba(212, 175, 55, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+  /* Bagliore al testo e al bordo */
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+/* Card Stile Dark */
+.custom-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Badge Tecnologie */
+.tech-badge {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: var(--accent-yellow);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Pulsante Dorato */
+.btn-gold {
+  background-color: #d4af37;
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  background-color: #f1c40f;
+  color: #000000;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+/* Pulsante Outline */
+.btn-outline-gold {
+  background-color: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Spaziatura abbondante tra le sezioni */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Pulsanti Icone Social nel Footer */
+.social-btn {
+  color: #f8f9fa;
+  border: 1px solid #2d2d2d;
+  background-color: #1e1e1e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+.social-btn:hover {
+  color: #d4af37;
+  border-color: rgba(212, 175, 55, 0.4);
+  background-color: rgba(212, 175, 55, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
